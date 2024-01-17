@@ -22,6 +22,3 @@ db = SQLAlchemy()
 db.init_app(app)
 
 import routes, models
-
-if __name__ == "__main__":
-    app.run()
