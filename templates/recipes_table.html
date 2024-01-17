@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Recipe Table{% endblock %}
+
+{% block content %}
+<br>
+<div class="table-bordered">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Title</th>
+                <th scope="col">Prep Time</th>
+                <th scope="col">Cooking Time</th>
+                <th scope="col">Yield Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for recipe in recipe_data %}
+            <tr>
+                <td>{{ recipe.category }}</td>
+                <td><a href="{{ url_for('recipe', recipe_id=recipe.id) }}">{{ recipe.title }}</a></td>
+                <td>{{ recipe.prep_time }}</td>
+                <td>{{ recipe.cooking_time }}</td>
+                <td>{{ recipe.yield_amount }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+</div>
+{% endblock %}

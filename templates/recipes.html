@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Recipes{% endblock %}
+
+{% block content %}
+    <br>
+    <h2>Recipes Home Page</h2>
+    <p> Here is a list of all of the available recipes:</p>
+    <ul>
+    {% for recipe in recipes|sort(attribute="title") %}
+        <li>
+            <a href="{{ url_for('recipe', recipe_id=recipe.id) }}">{{ recipe.title }}</a> - Category: {{recipe.category }}
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

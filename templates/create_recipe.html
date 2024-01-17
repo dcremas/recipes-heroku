@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}New Recipe{% endblock %}
+
+{% block content %}
+
+    <br>
+    <h2>Create Recipe</h2>
+    <h3>Fill out the form so everyone can enjoy your Recipe</h3>
+    <form method="POST" action="/create_recipe">
+        {{ form.csrf_token }}
+        <p>
+            {{ form.category.label }}
+            {{ form.category }}
+        </p>
+
+        {% if form.category.errors %}
+        <ul class="errors">
+            {% for error in form.category.errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <p>
+            {{ form.title.label }}
+            {{ form.title }}
+        </p>
+
+        {% if form.title.errors %}
+        <ul class="errors">
+            {% for error in form.title.errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <p>
+            {{ form.prep_time.label }}
+            {{ form.prep_time }}
+        </p>
+        {% if form.prep_time.errors %}
+        <ul class="errors">
+            {% for error in form.prep_time.errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <p>
+            {{ form.cooking_time.label }}
+            {{ form.cooking_time }}
+        </p>
+
+        {% if form.cooking_time.errors %}
+        <ul class="errors">
+            {% for error in form.cooking_time.errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <p>
+            {{ form.yield_amount.label }}
+            {{ form.yield_amount }}
+        </p>
+
+        {% if form.yield_amount.errors %}
+        <ul class="errors">
+            {% for error in form.yield_amount.errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <p>
+            {{ form.ingredients.label }}
+            {{ form.ingredients(rows="8", cols="70")|safe }}
+        </p>
+
+        {% if form.ingredients.errors %}
+        <ul class="errors">
+            {% for error in form.ingredients.errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <p>
+            {{ form.instructions.label }}
+            {{ form.instructions(rows="10", cols="70")|safe }}
+        </p>
+
+        {% if form.instructions.errors %}
+        <ul class="errors">
+            {% for error in form.instructions.errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <p>
+            {{ form.tips.label }}
+            {{ form.tips(rows="4", cols="70")|safe }}
+        </p>
+
+        {% if form.tips.errors %}
+        <ul class="errors">
+            {% for error in form.tips.errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    
+        <p>{{ form.submit }}</p>
+        
+    </form>
+
+{% endblock %}

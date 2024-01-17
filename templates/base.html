@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dustin Cremascoli's Recipe Site</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../static/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="{{ url_for('home') }}" class="logo"><strong>Recipe's</strong> by Dustin Cremascoli and Family</a>
+									<ul class="icons">
+										<li><a href="https://github.com/dcremas" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="https://www.linkedin.com/in/dustin-cremascoli-a91a515/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://twitter.com/dcremas" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									</ul>
+								</header>
+
+							{% block content %}{% endblock %}
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="{{ url_for('home') }}">Homepage</a></li>
+										<li><a href="{{ url_for('recipes') }}">Recipes</a></li>
+										<li><a href="{{ url_for('recipes_table') }}">Recipes Table</a></li>
+										<li><a href="{{ url_for('create_recipe') }}">Create Recipe</a></li>
+										<li><a href="{{ url_for('create_account') }}">Create Account</a></li>
+										<li><a href="{{ url_for('login') }}">Login</a></li>
+										<li><a href="{{ url_for('logout') }}">Logout</a></li>
+										<li><a href="https://pro.dustincremascoli.com">Go To PRO SITE</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>My Latest Recipes</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="../static/images/pic07.jpg" alt="" /></a>
+											<p>Homeade Pizza's will all of the veggies and fresh mozarella.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="../static/images/pic08.jpg" alt="" /></a>
+											<p>Maybe the best pancake that I have ever seen at the MGM Grand in Vegas.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="../static/images/pic09.jpg" alt="" /></a>
+											<p>Carne Asada Fries with pinto beans and the works.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Send me an email if you are having any problems with the site, or if you have anything to contribute.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">dustincremascoli@gmail.com</a></li>
+										<li class="icon solid fa-phone">(619) 840-1991</li>
+										<li class="icon solid fa-home">209 N Russel St.<br />
+										Mt. Prospect, IL 60056</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../static/assets/js/jquery.min.js"></script>
+			<script src="../static/assets/js/browser.min.js"></script>
+			<script src="../static/assets/js/breakpoints.min.js"></script>
+			<script src="../static/assets/js/util.js"></script>
+			<script src="../static/assets/js/main.js"></script>
+
+	</body>
+</html>

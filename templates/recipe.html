@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Recipe{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h4 class="card-header">{{ recipe.category }}</h4>
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h5>Title: {{ recipe.title }}</h5>
+                    <h6>Prep Time: {{ recipe.prep_time }}</h6>
+                    <h6>Cooking Time: {{ recipe.cooking_time }}</h6>
+                    <h6>Servings: {{ recipe.yield_amount }}</h6>
+                </div>
+                <div class="col-6">
+                    <img src="{{ image }}">
+                </div>
+            </div>
+            </ul>
+            <div class="row">
+                <div class="col-4">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        {% for ingredient in ingredients %}
+                        <li>{{ ingredient }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-8">
+                    <h6>Instructions:</h6>
+                    <ol>
+                        {% for instruction in instructions %}
+                        <li>{{ instruction }}</li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <h6>Tips:</h6>
+                <ul>
+                    {% for tip in tips %}
+                    <li>{{ tip }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

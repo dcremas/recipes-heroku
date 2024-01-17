@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %} The Homepage of Dustin's Receipe Site {% endblock %}
+
+{% block content %}
+
+<!-- Banner -->
+<section id="banner">
+    <div class="content">
+        <header>
+            <h2>Hi, I’m Dustin Cremascoli<br />
+            and this is my Recipe Site</h2>
+            <p>A free and full repository of all of my families favorite and best recipes</p>
+        </header>
+        <p>Feel free to browse, download and use any recipes that you see on this site.  Also, if you have any good recipes to contribute, you can create an account and post a recipe for the collection yourself. This is meant to be a free spot to discover, use and share our favorite recipes.</p>
+        <ul class="actions">
+            <li><a href="#" class="button big">Learn More</a></li>
+        </ul>
+    </div>
+    <span class="image object">
+        <img src="../static/images/pic10.jpg" alt="" />
+    </span>
+</section>
+
+<!-- Section -->
+<section>
+    <header class="major">
+        <h2>A place to share recipes</h2>
+    </header>
+    <div class="features">
+        <article>
+            <span class="icon fa-gem"></span>
+            <div class="content">
+                <h3><a href="{{ url_for('recipes') }}">View the Recipe's</a></h3>
+                <p>Take a look around the site and discover if their are any recipes that interest you.</p>
+            </div>
+        </article>
+        <article>
+            <span class="icon solid fa-paper-plane"></span>
+            <div class="content">
+                <h3>Take a Recipe</h3>
+                <p>You don't have to be logged in to view a recipe and print it out, or download it in a friendly format.</p>
+            </div>
+        </article>
+        <article>
+            <span class="icon solid fa-rocket"></span>
+            <div class="content">
+                <h3>Share a Recipe</h3>
+                <p>If you have a favorite recipe that is worthly, create and account and share the recipe with our family.</p>
+            </div>
+        </article>
+        <article>
+            <span class="icon solid fa-signal"></span>
+            <div class="content">
+                <h3>Give Feedback</h3>
+                <p>Anything that you see that could be improved upon, this is a work in progress so feel free to give feedback.</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- Section -->
+<section>
+    <header class="major">
+        <h2>Our Favorite Selections</h2>
+    </header>
+    <div class="posts">
+        <article>
+            <a href="#" class="image"><img src="../static/images/pic01.jpg" alt="" /></a>
+            <h3>Delicious Homeade Ice Cream</h3>
+            <p>Cookies and Cream Ice Cream, made with the finest Organic Cream, Milk, Sugar and Vanilla, a fantastic treat.</p>
+            <ul class="actions">
+                <li><a href="#" class="button">More</a></li>
+            </ul>
+        </article>
+        <article>
+            <a href="#" class="image"><img src="../static/images/pic02.jpg" alt="" /></a>
+            <h3>Chicken Bakes</h3>
+            <p>Inspired by one of the greatest items at the Costco food court, this is a homeade version of the chicken bake with the same dough as the Pizza Dough Recipe.</p>
+            <ul class="actions">
+                <li><a href="#" class="button">More</a></li>
+            </ul>
+        </article>
+        <article>
+            <a href="#" class="image"><img src="../static/images/pic03.jpg" alt="" /></a>
+            <h3>Fresh Rolls and Hoagies</h3>
+            <p>A versatile recipe for bread that can be morphed into hoagies, rolls, dinner rolls or pretty much whatever type of bread product you desire.</p>
+            <ul class="actions">
+                <li><a href="#" class="button">More</a></li>
+            </ul>
+        </article>
+        <article>
+            <a href="#" class="image"><img src="../static/images/pic04.jpg" alt="" /></a>
+            <h3>Stacks of Pancakes</h3>
+            <p>An eight ingredient pancake recipe (all from items that should be on hand) that will blow you away.</p>
+            <ul class="actions">
+                <li><a href="#" class="button">More</a></li>
+            </ul>
+        </article>
+        <article>
+            <a href="#" class="image"><img src="../static/images/pic05.jpg" alt="" /></a>
+            <h3>Blueberry Muffins</h3>
+            <p>A little more involved, but worth the time - especially if you make a double batch.</p>
+            <ul class="actions">
+                <li><a href="#" class="button">More</a></li>
+            </ul>
+        </article>
+        <article>
+            <a href="#" class="image"><img src="../static/images/pic06.jpg" alt="" /></a>
+            <h3>Fresh Pico de Gallo</h3>
+            <p>Tried and true accompanyment for pretty much anythin, this should be on hand at all times.</p>
+            <ul class="actions">
+                <li><a href="#" class="button">More</a></li>
+            </ul>
+        </article>
+    </div>
+</section>
+
+{% endblock %}
