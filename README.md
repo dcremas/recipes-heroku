@@ -1,7 +1,7 @@
 ### Title: Flask Web Application for Personal Recipes.
 
 *To see the full codebase for this project:*
-[Link to my github account](https://github.com/dcremas/recipes)
+[Link to my github account](https://github.com/dcremas/recipes-heroku)
 
 #### Description:
 
